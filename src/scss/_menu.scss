@@ -1,0 +1,61 @@
+//
+// Sidebar
+//
+
+#menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: $sidebar-width;
+  margin: 0;
+  padding: 15px;
+  background-color: #0d141f;
+
+  p {
+    padding: 5px 0;
+    margin: 0;
+    border: none;
+  }
+
+  // Field for select database
+  #dbs {
+    color: #0d141f;
+
+    span {
+      display: none !important;
+    }
+  }
+
+  form {
+    select {
+      width: 100%;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 70vh;
+    overflow: hidden !important;
+    overflow-y: auto !important;
+    @include scrollbar;
+
+    li {
+      padding: 5px;
+      @extend .clearfix;
+
+      &:hover {
+        background-color: #24344d;
+      }
+
+      a {
+        background: none;
+
+        &.select {
+          float: right;
+        }
+      }
+    }
+  }
+}

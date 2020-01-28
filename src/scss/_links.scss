@@ -1,0 +1,30 @@
+//
+// Navigation links and tabs
+//
+
+.links {
+  a {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 3px 12px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    color: #63b7c0;
+    border: 1px solid rgba(16, 75, 80, 0.46);
+    text-decoration: none;
+    transition: all $time-animate ease-in-out;
+
+    &:hover {
+      color: #0d141f;
+      background-color: #63b7c0;
+      text-decoration: none;
+    }
+  }
+}

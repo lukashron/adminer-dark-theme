@@ -1,0 +1,23 @@
+//
+// Mixins
+//
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+  }
+
+  scrollbar-width: $scrollbar-width;
+  scrollbar-color: #0d141f #a62b6b;
+
+  &::-webkit-scrollbar-track {
+    background: #0d141f;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #a62b6b;
+    border-radius: 6px;
+    border: 4px solid #0d141f;
+    cursor: pointer;
+  }
+}

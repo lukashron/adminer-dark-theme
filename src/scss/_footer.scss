@@ -1,0 +1,20 @@
+//
+// Footer
+//
+
+.footer {
+  margin: 0;
+  border: none;
+  background: #0d141f;
+
+  & > div {
+    padding: 15px;
+    background: none;
+  }
+}
+
+#import {
+  margin-top: 1rem;
+  padding: 15px;
+  background: #0d141f;
+}

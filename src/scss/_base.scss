@@ -1,0 +1,102 @@
+//
+// Base style
+//
+
+html {
+  font-size: 14px;
+  min-height: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: #ffffff;
+  background-image: linear-gradient(#131c29, #0c1018);
+  @include scrollbar;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 1.250rem 0;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+a {
+  font-weight: 400;
+  color: #63b7c0;
+  text-decoration: none;
+
+  &:hover,
+  &:link:hover,
+  &:visited,
+  &:visited:hover {
+    color: #63b7c0;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
+fieldset {
+  border-radius: 3px;
+  border-color: #1c2636;
+}
+
+.error,
+.message {
+  padding: .75rem 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: .25rem;
+}
+
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+}
+
+.message {
+  color: #155724;
+  background-color: #d4edda;
+}

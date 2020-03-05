@@ -1,0 +1,17 @@
+//
+// SQL editor
+//
+
+.sqlarea {
+  outline: none;
+  border: 1px solid #a62b6b !important;
+
+  &:hover,
+  &:focus {
+    border-color: #d43789 !important;
+  }
+}
+
+.jush {
+  color: #ffffff;
+}

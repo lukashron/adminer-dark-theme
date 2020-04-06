@@ -13,7 +13,7 @@
     "url": "https://github.com/lukashron/adminer-dark-theme.git"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.4",
+    "autoprefixer": "^9.7.5",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",

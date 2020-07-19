@@ -58,4 +58,16 @@
       }
     }
   }
+
+  // Actions links
+  .links {
+    @extend .clearfix;
+
+    a {
+      float: left;
+      width: 50%;
+      margin: 0;
+      padding: 10px 17px;
+    }
+  }
 }

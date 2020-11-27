@@ -2,13 +2,16 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-sass.compiler = require('node-sass');
+    sass.compiler = require('node-sass');
 var autoprefixer = require('autoprefixer');
 var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 
+// Source path
+const SOURCE = './src/scss/**/*.scss';
+
 gulp.task('sass', function () {
-    return gulp.src('./src/scss/**/*.scss')
+    return gulp.src(SOURCE)
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(postcss([ autoprefixer() ]))
@@ -17,5 +20,5 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./src/scss/**/*.scss', gulp.series('sass'));
+    gulp.watch(SOURCE, gulp.series('sass'));
 });

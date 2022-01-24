@@ -19,5 +19,5 @@ gulp.task('build', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(SOURCE, gulp.series('sass'));
+    gulp.watch(SOURCE, gulp.series('build'));
 });

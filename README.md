@@ -17,10 +17,10 @@ $ npm install
 
 Build
 ```
-$ gulp sass
+$ npm run build
 ```
 
 Watcher
 ```
-$ gulp watch
+$ npm run watch
 ```

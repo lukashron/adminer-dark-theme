@@ -3,7 +3,7 @@
 //
 
 table {
-  margin: 15px 0;
+  margin: 1rem 0;
   font-size: 100%;
   border: 1px solid #24344d;
   @include defaultStyleBoxShadow;
@@ -11,7 +11,7 @@ table {
   td,
   th {
     border: 0;
-    padding: 15px;
+    padding: 0.8rem;
     font-weight: 400;
     background: none;
   }
@@ -22,7 +22,7 @@ table {
 
   .odd th,
   .odd td {
-    background-color: #0d141f;
+    background-color: #020305;
   }
 
   thead {

@@ -8,8 +8,9 @@
   bottom: 0;
   width: $sidebar-width;
   margin: 0;
-  padding: 15px;
+  padding: 10px;
   background-color: #0d141f;
+  @include defaultStyleBoxShadow;
 
   p {
     padding: 5px 0;
@@ -34,7 +35,10 @@
 
   ul {
     padding: 0;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0px;
+    margin-left: -8px;
+    margin-right: -8px;
     border: none;
     height: 70vh;
     overflow: hidden !important;
@@ -42,7 +46,10 @@
     @include scrollbar;
 
     li {
-      padding: 5px;
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-top: 5px;
+      padding-bottom: 5px;
       @extend .clearfix;
 
       &:hover {
@@ -50,6 +57,7 @@
       }
 
       a {
+        font-size: 1rem;
         background: none;
 
         &.select {

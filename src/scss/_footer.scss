@@ -6,6 +6,7 @@
   margin: 0;
   border: none;
   background: #0d141f;
+  @include defaultStyleBoxShadow;
 
   & > div {
     padding: 15px;

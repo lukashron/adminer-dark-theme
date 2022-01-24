@@ -1,6 +1,6 @@
 # Theme for Adminer
 
-Dark theme for [www.adminer.org](http://www.adminer.org/) database tool.
+Dark theme for [www.adminer.org](http://www.adminer.org/) database tool. Support Adminer 4.7.5. and latest.
 
 ![Screenshot](https://www.lukashron.cz/media/files/dark-theme-for-adminer.png)
 
@@ -24,3 +24,6 @@ Watcher
 ```
 $ npm run watch
 ```
+
+
+www.lukashron.cz

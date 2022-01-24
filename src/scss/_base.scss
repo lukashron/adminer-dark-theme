@@ -28,38 +28,6 @@ body {
   @include scrollbar;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  background: none;
-  border: none;
-  margin: 0;
-  padding: 1.250rem 0;
-  color: #ffffff;
-}
-
-h1 {
-  font-size: 30px;
-}
-
-h2 {
-  font-size: 25px;
-}
-
-h3 {
-  font-size: 20px;
-}
-
-h4 {
-  font-size: 15px;
-}
-
-h5 {
-  font-size: 14px;
-}
-
-h6 {
-  font-size: 14px;
-}
-
 a {
   font-weight: 400;
   color: #63b7c0;

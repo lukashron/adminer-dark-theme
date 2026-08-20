@@ -73,9 +73,22 @@
         background-color: #24344d;
       }
 
+      // Currently open table/view: Adminer marks its link(s) with
+      // an "active" class. A left accent bar (box-shadow keeps the
+      // negative ul margins intact) makes the current selection easy
+      // to spot while scrolling a long table list.
+      &:has(a.active) {
+        background-color: #1c2636;
+        box-shadow: inset 3px 0 0 0 $link-color;
+      }
+
       a {
         font-size: 1rem;
         background: none;
+
+        &.active {
+          color: #ffffff;
+        }
 
         // Table/view name link: truncate instead of overflowing onto
         // the select link or the scrollbar when the name is a long,

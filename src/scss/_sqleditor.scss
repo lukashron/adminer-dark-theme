@@ -4,17 +4,21 @@
 
 .sqlarea {
   outline: none;
-  border: 1px solid #a62b6b !important;
+  // $accent-magenta (#a62b6b) only clears ~2.6:1 here — under the
+  // 3:1 WCAG minimum for a meaningful UI border. $accent-magenta-fg
+  // is the same hue, already used for hover/focus, promoted to the
+  // resting state too (~3.8:1).
+  border: 1px solid $accent-magenta-fg !important;
   border-radius: $radius-md;
   transition: border-color $time-fast ease-in-out, box-shadow $time-fast ease-in-out;
 
   &:hover,
   &:focus {
-    border-color: #d43789 !important;
+    border-color: $danger-color !important;
   }
 
   &:focus {
-    box-shadow: 0 0 0 2px rgba(212, 55, 137, 0.25);
+    box-shadow: 0 0 0 2px rgba(251, 88, 139, 0.25);
   }
 }
 

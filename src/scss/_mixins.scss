@@ -50,13 +50,18 @@
               color $time-fast ease-in-out;
 }
 
-@mixin button-filled($bg, $fg: $button-fg, $hover-bg: $button-hover-bg) {
+// Hover defaults to a darker fill + white text (not just a darker
+// fill with the same dark text) — dark-on-darkened-fill drops under
+// 4.5:1 (e.g. #0d141f on #207d87 is ~3.8:1). Flipping the text to
+// white on hover keeps every filled button at AA or better.
+@mixin button-filled($bg, $fg: $button-fg, $hover-bg: $button-hover-bg, $hover-fg: $default-color) {
   @include button-base;
   color: $fg;
   background-color: $bg;
 
   &:hover {
     background-color: $hover-bg;
+    color: $hover-fg;
     text-decoration: none;
   }
 }

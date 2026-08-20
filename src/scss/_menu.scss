@@ -23,8 +23,11 @@
     padding: .3em 0;
   }
 
+  // $accent-magenta reads at only ~2.8:1 on this background — too
+  // low for text (WCAG AA needs 4.5:1). $danger-color is the same
+  // hue family and clears ~6:1.
   .version {
-    color: #a62b6b;
+    color: $danger-color;
   }
 
   p {

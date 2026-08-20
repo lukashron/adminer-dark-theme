@@ -44,4 +44,13 @@ $link-hover-color: #63b7c0;
 $button-fg: #0d141f;
 $button-hover-bg: #207d87;
 $danger-color: #fb588b;
-$danger-hover-color: #e0356d;
+// Darkened enough that white hover text still clears 4.5:1 (was
+// #e0356d at ~4.3:1 against white — just under AA).
+$danger-hover-color: #c62d63;
+
+// Magenta accent promoted for anything that needs to read as
+// foreground (text, borders) rather than a background fill —
+// $accent-magenta (#a62b6b) only clears ~2.6–2.8:1 against the dark
+// navy backgrounds, well under the 3:1/4.5:1 WCAG minimums.
+$accent-magenta: #a62b6b;
+$accent-magenta-fg: #d43789;

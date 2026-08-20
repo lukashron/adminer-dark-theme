@@ -13,9 +13,13 @@
 
     // Without this, the generic form input[type=submit]:hover rule
     // (higher specificity thanks to the :hover pseudo-class) wins and
-    // flashes the teal hover color on an otherwise pink button.
+    // flashes the teal hover color on an otherwise pink button. White
+    // text is set explicitly too (relying on the mixin's default via
+    // cascade would work, but this keeps the pair together and
+    // verifiably at ~5.3:1 against $danger-hover-color).
     &:hover {
       background-color: $danger-hover-color !important;
+      color: $default-color !important;
     }
   }
 }

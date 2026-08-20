@@ -1,5 +1,8 @@
 # Change Log
 
+## v5.1.0
+* [FIX] Support Adminer version 5.*
+
 ## v5.0.0
 * Version strategy is new. Theme version ~ Adminer version.
 * Support Adminer v5

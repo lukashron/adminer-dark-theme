@@ -25,3 +25,38 @@
 .jush {
   color: #ffffff;
 }
+
+// Jush's SQL/PHP autocomplete isn't a custom popup — it's a native
+// multi-row <select size="N"> (class "jush-autocomplete"), living
+// inside the same <form> as every other field. Two problems followed
+// from that: the generic `form select` rule (sized for a one-line
+// closed dropdown) squashed it to height:30px, hiding almost every
+// suggestion but the first; and the browser's own highlight color on
+// the selected <option> — combined with our light option text
+// (#d6d6d6) — made the active row unreadable (light text on a light
+// native highlight).
+.jush-autocomplete {
+  height: auto;
+  padding: 0;
+  background: #24344d;
+  border: 1px solid $link-color;
+  border-radius: $radius-sm;
+  box-shadow: $shadow-md;
+  -webkit-appearance: listbox;
+  appearance: listbox;
+
+  option {
+    padding: 4px 10px;
+    color: #d6d6d6;
+    background: #24344d;
+  }
+
+  // Chromium (incl. Opera) silently ignores a plain background-color
+  // on a selected listbox <option> — the linear-gradient-as-fill
+  // trick is the documented workaround to actually win over the
+  // native highlight.
+  option:checked {
+    background: linear-gradient($link-color, $link-color) $link-color !important;
+    color: $button-fg !important;
+  }
+}

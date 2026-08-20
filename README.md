@@ -25,5 +25,8 @@ Watcher
 $ npm run watch
 ```
 
+## Support
 
-www.lukashron.cz
+If you like the project, you can support its development with a coffee -> https://buymeacoffee.com/lukashron
+
+www.lukashron.cz | May the Force be with you.

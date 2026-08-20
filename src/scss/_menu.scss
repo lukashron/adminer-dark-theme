@@ -61,11 +61,13 @@
     @include scrollbar;
 
     li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       padding-left: 8px;
       padding-right: 8px;
       padding-top: 5px;
       padding-bottom: 5px;
-      @extend .clearfix;
 
       &:hover {
         background-color: #24344d;
@@ -75,8 +77,25 @@
         font-size: 1rem;
         background: none;
 
+        // Table/view name link: truncate instead of overflowing onto
+        // the select link or the scrollbar when the name is a long,
+        // unbreakable token (e.g. ALL_CAPS_WITH_UNDERSCORES).
+        //
+        // Order is pinned explicitly (not just source order) so the
+        // table name always renders left and the select link right,
+        // regardless of the order Adminer emits the two <a> tags in.
+        &:not(.select) {
+          order: 1;
+          min-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
         &.select {
-          float: right;
+          order: 2;
+          flex-shrink: 0;
+          margin-left: 8px;
         }
       }
     }

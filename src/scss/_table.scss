@@ -6,7 +6,9 @@ table {
   margin: 1rem 0;
   font-size: 100%;
   border: 1px solid #24344d;
-  @include defaultStyleBoxShadow;
+  border-radius: $radius-md;
+  overflow: hidden;
+  box-shadow: $shadow-sm;
 
   td,
   th {
@@ -14,6 +16,7 @@ table {
     padding: 0.8rem;
     font-weight: 400;
     background: none;
+    transition: background-color $time-fast ease-in-out;
   }
 
   .checked {

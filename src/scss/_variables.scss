@@ -3,9 +3,24 @@
 //
 
 $time-animate: .2s;
+$time-fast: .15s;
 $scrollbar-width: 15px;
 $global-padding: 15px;
 $sidebar-width: 300px;
+
+// Radius scale — the single biggest lever for a more modern, less
+// boxy feel. Applied consistently to surfaces, inputs and buttons.
+$radius-sm: 4px;
+$radius-md: 6px;
+$radius-lg: 10px;
+
+// Elevation — layered instead of one shadow reused everywhere.
+// $shadow-lg keeps the original signature glow, reserved for the
+// outer "shell" (sidebar, footer). Inner surfaces (table, code,
+// fieldsets) get the lighter tiers so depth reads as hierarchy.
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, .5);
+$shadow-md: 0 6px 16px -2px rgba(0, 0, 0, .55);
+$shadow-lg: 0 0 29px -1px rgba(0, 0, 0, .75);
 
 $default-background: #131c29;
 $default-color: #ffffff;
@@ -24,3 +39,9 @@ $table-row-hover: $table-row-checked;
 // Links
 $link-color: #63b7c0;
 $link-hover-color: #63b7c0;
+
+// Buttons
+$button-fg: #0d141f;
+$button-hover-bg: #207d87;
+$danger-color: #fb588b;
+$danger-hover-color: #e0356d;

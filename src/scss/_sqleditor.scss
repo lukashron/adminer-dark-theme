@@ -5,10 +5,16 @@
 .sqlarea {
   outline: none;
   border: 1px solid #a62b6b !important;
+  border-radius: $radius-md;
+  transition: border-color $time-fast ease-in-out, box-shadow $time-fast ease-in-out;
 
   &:hover,
   &:focus {
     border-color: #d43789 !important;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(212, 55, 137, 0.25);
   }
 }
 

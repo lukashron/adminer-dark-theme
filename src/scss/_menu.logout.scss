@@ -8,7 +8,14 @@
   box-shadow: none !important;
 
   input[type="submit"] {
-    border-color: #fb588b !important;
-    background-color: #fb588b !important;
+    border-color: $danger-color !important;
+    background-color: $danger-color !important;
+
+    // Without this, the generic form input[type=submit]:hover rule
+    // (higher specificity thanks to the :hover pseudo-class) wins and
+    // flashes the teal hover color on an otherwise pink button.
+    &:hover {
+      background-color: $danger-hover-color !important;
+    }
   }
 }

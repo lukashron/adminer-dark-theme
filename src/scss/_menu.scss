@@ -54,20 +54,27 @@
     margin-bottom: 0px;
     margin-left: -8px;
     margin-right: -8px;
-    border: none;
+    border-top: 1px solid rgba(255, 255, 255, .06);
+    padding-top: 8px;
     height: 70vh;
     overflow: hidden !important;
     overflow-y: auto !important;
     @include scrollbar;
 
+    // Rows sit as inset "chips" (margin + radius) instead of
+    // full-bleed bars, so hover/active state doesn't touch the
+    // sidebar edges — reads as a nav list rather than a table.
     li {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin: 1px 4px;
       padding-left: 8px;
       padding-right: 8px;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      border-radius: $radius-sm;
+      transition: background-color $time-fast ease-in-out, box-shadow $time-fast ease-in-out;
 
       &:hover {
         background-color: #24344d;
@@ -75,7 +82,7 @@
 
       // Currently open table/view: Adminer marks its link(s) with
       // an "active" class. A left accent bar (box-shadow keeps the
-      // negative ul margins intact) makes the current selection easy
+      // chip's own margin intact) makes the current selection easy
       // to spot while scrolling a long table list.
       &:has(a.active) {
         background-color: #1c2636;
@@ -117,6 +124,8 @@
   // Actions links
   .links {
     @extend .clearfix;
+    border-top: 1px solid rgba(255, 255, 255, .06);
+    margin-top: 4px;
 
     a {
       float: left;

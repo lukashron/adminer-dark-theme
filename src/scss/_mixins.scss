@@ -23,7 +23,53 @@
 }
 
 @mixin defaultStyleBoxShadow {
-  -webkit-box-shadow: 0 0 29px -1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0 0 29px -1px rgba(0,0,0,0.75);
-  box-shadow: 0 0 29px -1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: $shadow-lg;
+  -moz-box-shadow: $shadow-lg;
+  box-shadow: $shadow-lg;
+}
+
+// Shared button anatomy: filled and outline variants both start here
+// so every clickable "button-like" element (submit inputs, .links
+// tabs, logout) shares the same radius, padding and motion.
+@mixin button-base {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: $radius-sm;
+  border: 1px solid transparent;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition: background-color $time-fast ease-in-out,
+              border-color $time-fast ease-in-out,
+              color $time-fast ease-in-out;
+}
+
+@mixin button-filled($bg, $fg: $button-fg, $hover-bg: $button-hover-bg) {
+  @include button-base;
+  color: $fg;
+  background-color: $bg;
+
+  &:hover {
+    background-color: $hover-bg;
+    text-decoration: none;
+  }
+}
+
+@mixin button-outline($color, $border, $hover-bg: $color, $hover-fg: $button-fg) {
+  @include button-base;
+  color: $color;
+  border-color: $border;
+  background-color: transparent;
+
+  &:hover {
+    color: $hover-fg;
+    background-color: $hover-bg;
+    text-decoration: none;
+  }
 }

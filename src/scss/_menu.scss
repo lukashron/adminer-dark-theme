@@ -10,6 +10,7 @@
   margin: 0;
   padding: 10px;
   background-color: #0d141f;
+  z-index: 999;
   @include defaultStyleBoxShadow;
 
   #logo {

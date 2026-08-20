@@ -10,11 +10,17 @@
   margin: 0;
   padding: 10px;
   background-color: #0d141f;
+  z-index: 999;
   @include defaultStyleBoxShadow;
 
   #logo {
     margin-bottom: 0;
     padding-right: 5px;
+  }
+
+  #lang {
+    position: initial;
+    padding: .3em 0;
   }
 
   .version {

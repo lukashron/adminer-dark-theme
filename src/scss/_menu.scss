@@ -23,8 +23,11 @@
     padding: .3em 0;
   }
 
+  // $accent-magenta reads at only ~2.8:1 on this background — too
+  // low for text (WCAG AA needs 4.5:1). $danger-color is the same
+  // hue family and clears ~6:1.
   .version {
-    color: #a62b6b;
+    color: $danger-color;
   }
 
   p {
@@ -54,29 +57,68 @@
     margin-bottom: 0px;
     margin-left: -8px;
     margin-right: -8px;
-    border: none;
+    border-top: 1px solid rgba(255, 255, 255, .06);
+    padding-top: 8px;
     height: 70vh;
     overflow: hidden !important;
     overflow-y: auto !important;
     @include scrollbar;
 
+    // Rows sit as inset "chips" (margin + radius) instead of
+    // full-bleed bars, so hover/active state doesn't touch the
+    // sidebar edges — reads as a nav list rather than a table.
     li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 1px 4px;
       padding-left: 8px;
       padding-right: 8px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      @extend .clearfix;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      border-radius: $radius-sm;
+      transition: background-color $time-fast ease-in-out, box-shadow $time-fast ease-in-out;
 
       &:hover {
         background-color: #24344d;
+      }
+
+      // Currently open table/view: Adminer marks its link(s) with
+      // an "active" class. A left accent bar (box-shadow keeps the
+      // chip's own margin intact) makes the current selection easy
+      // to spot while scrolling a long table list.
+      &:has(a.active) {
+        background-color: #1c2636;
+        box-shadow: inset 3px 0 0 0 $link-color;
       }
 
       a {
         font-size: 1rem;
         background: none;
 
+        &.active {
+          color: #ffffff;
+        }
+
+        // Table/view name link: truncate instead of overflowing onto
+        // the select link or the scrollbar when the name is a long,
+        // unbreakable token (e.g. ALL_CAPS_WITH_UNDERSCORES).
+        //
+        // Order is pinned explicitly (not just source order) so the
+        // table name always renders left and the select link right,
+        // regardless of the order Adminer emits the two <a> tags in.
+        &:not(.select) {
+          order: 1;
+          min-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
         &.select {
-          float: right;
+          order: 2;
+          flex-shrink: 0;
+          margin-left: 8px;
         }
       }
     }
@@ -85,6 +127,8 @@
   // Actions links
   .links {
     @extend .clearfix;
+    border-top: 1px solid rgba(255, 255, 255, .06);
+    margin-top: 4px;
 
     a {
       float: left;

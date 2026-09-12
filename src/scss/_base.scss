@@ -46,6 +46,12 @@ a {
     font-weight: 400;
     text-decoration: underline;
   }
+
+  &:focus-visible {
+    outline: 2px solid $link-color;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
 p {
@@ -54,7 +60,7 @@ p {
 }
 
 fieldset {
-  border-radius: 3px;
+  border-radius: $radius-md;
   border-color: $odd-bg;
 }
 
@@ -63,15 +69,18 @@ fieldset {
   padding: .75rem 1.25rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border-radius: .25rem;
+  border-radius: $radius-sm;
+  border: 1px solid transparent;
 }
 
 .error {
-  color: #721c24;
-  background-color: #f8d7da;
+  color: #ff9eb1;
+  background-color: rgba(220, 53, 69, .12);
+  border-color: rgba(220, 53, 69, .35);
 }
 
 .message {
-  color: #155724;
-  background-color: #d4edda;
+  color: #8fe6b3;
+  background-color: rgba(40, 167, 69, .12);
+  border-color: rgba(40, 167, 69, .35);
 }

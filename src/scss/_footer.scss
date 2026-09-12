@@ -6,7 +6,8 @@
   margin: 0;
   border: none;
   background: #0d141f;
-  @include defaultStyleBoxShadow;
+  border-radius: $radius-md;
+  box-shadow: $shadow-md;
 
   & > div {
     padding: 15px;
@@ -17,5 +18,6 @@
 #import {
   margin-top: 1rem;
   padding: 15px;
+  border-radius: $radius-md;
   background: #0d141f;
 }

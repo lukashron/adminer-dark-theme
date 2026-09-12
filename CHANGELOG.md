@@ -1,5 +1,17 @@
 # Change Log
 
+## v6.0.0
+* Support Adminer version 6.0.1
+* Redesign: radius & elevation token system, unified button/link styles, sidebar "chip" rows, rounded table/form/code/SQL editor surfaces
+* Sidebar: highlight the currently open table/view
+* Lighter heading weight, smoother hover transitions, focus-visible states
+* AA contrast fixes: sidebar version label, button hover text, logout hover, SQL editor border
+* Removed unused `node-sass` dependency (build already uses Dart Sass)
+* Updated dependencies
+* [FIX] Sidebar: table name and "select" link were rendered in mirrored order
+* [FIX] SQL editor: table styling was clipping the autocomplete suggestion list
+* [FIX] SQL/PHP autocomplete: selected option unreadable and listbox height squashed to one row
+
 ## v5.1.0
 * [FIX] Support Adminer version 5.*
 

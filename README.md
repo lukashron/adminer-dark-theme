@@ -1,6 +1,6 @@
 # Theme for Adminer
 
-Dark theme for [www.adminer.org](http://www.adminer.org/) database tool. Support Adminer v5.
+Dark theme for [www.adminer.org](http://www.adminer.org/) database tool. Support Adminer v6.0.1.
 
 ![Screenshot](https://www.lukashron.cz/media/files/dark-theme-for-adminer.png)
 
@@ -25,8 +25,9 @@ Watcher
 $ npm run watch
 ```
 
-## Support
-
-If you like the project, you can support its development with a coffee -> https://buymeacoffee.com/lukashron
+## Support :]
+*********************************************************
+If you like the project, you can support its development with a coffee -> https://buymeacoffee.com/lukashron Thank you!
+*********************************************************
 
 www.lukashron.cz | May the Force be with you.
